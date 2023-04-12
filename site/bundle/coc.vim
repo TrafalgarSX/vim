@@ -11,6 +11,8 @@
 " delays and poor user experience.
 set updatetime=300
 set signcolumn=yes
+set pumwidth=0
+let g:coc_config_home = '~/.vim/vim/'
 
 silent! call mkdir($HOME . '/.cache/ccls', 'p')
 silent! call coc#config('languageserver.ccls.initializationOptions.cache.directory', expand('~/.cache/ccls'))
