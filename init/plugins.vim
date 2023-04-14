@@ -160,6 +160,7 @@ let g:vim_json_conceal = 0
 "----------------------------------------------------------------------
 " asyncrun / vimmake
 "----------------------------------------------------------------------
+let g:asyncrun_open = 15
 let g:asyncrun_timer = 200
 let s:python = executable('python3')? 'python3' : 'python'
 let s:script = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
@@ -175,8 +176,6 @@ endif
 if s:windows != 0
 	let g:asyncrun_encs = 'gbk'
 endif
-
-let g:asyncrun_open = 6
 
 if executable('rg')
 	let g:vimmake_grep_mode = 'rg'

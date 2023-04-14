@@ -79,7 +79,7 @@ if has_key(s:enabled, 'simple')
 	" 彩虹括号
 	Plug 'luochen1990/rainbow'
 	"switch keyboard
-	Plug 'Neur1n/neuims'
+	" Plug 'Neur1n/neuims'
 	" Plug 'romainl/vim-cool'
 	" 反义词
 	" Plug 'bootleq/vim-cycle'
@@ -133,12 +133,15 @@ if has_key(s:enabled, 'basic')
 
 	Plug 'pprovost/vim-ps1', { 'for': 'ps1' }
 	Plug 'tbastos/vim-lua', { 'for': 'lua' }
-	Plug 'vim-python/python-syntax', { 'for': ['python'] }
-	Plug 'pboettch/vim-cmake-syntax', { 'for': ['cmake'] }
+	" Plug 'vim-python/python-syntax', { 'for': ['python'] }
+	Plug 'sheerun/vim-polyglot'
+	Plug 'pboettch/vim-cmake-syntax'
 	Plug 'skywind3000/vim-flex-bison-syntax', { 'for': ['yacc', 'lex'] }
 	Plug 'lark-parser/vim-lark-syntax'
 	Plug 'preservim/vim-markdown'
 
+
+	" , { 'for': ['cmake'] }
 	" 基本上用不到的语言支持
 	" Plug 'dylon/vim-antlr'
 	" Plug 'beyondmarc/hlsl.vim'

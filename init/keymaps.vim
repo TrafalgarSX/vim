@@ -248,6 +248,7 @@ inoremap <silent><s-f7> <ESC>:AsyncTask project-init<cr>
 inoremap <silent><s-f8> <ESC>:AsyncTask project-install<cr>
 inoremap <silent><s-f9> <ESC>:AsyncTask project-build<cr>
 
+" TODO 待定
 noremap <silent><m-f1> :AsyncTask task-f1<cr>
 noremap <silent><m-f2> :AsyncTask task-f2<cr>
 noremap <silent><m-f3> :AsyncTask task-f3<cr>
@@ -391,6 +392,7 @@ endfor
 "----------------------------------------------------------------------
 " space+ b/c : buffer
 noremap <silent><space>bc :BufferClose<cr>
+noremap <silent><space>bd :bd<cr>
 noremap <silent><space>cw :CdToFileDir<cr>
 noremap <silent><space>cr :CdToProjectRoot<cr>
 
@@ -484,7 +486,11 @@ noremap <silent><space>lt :call asclib#html_prettify()<cr>
 " noremap <space>m3 :call quickmenu#toggle(3)<cr>
 
 nnoremap <silent>g5 :PreviewTag<cr>
-nnoremap <silent><space>ww :call asclib#touch_file('wsgi')<cr>
+
+" if !(has('win32') || has('win64') || has('win16') || has('win95'))
+if 0
+   nnoremap <silent><space>ww :call asclib#touch_file('wsgi')<cr>
+endif
 
 "----------------------------------------------------------------------
 " others  貌似都不起作用，也不知道有什么作用

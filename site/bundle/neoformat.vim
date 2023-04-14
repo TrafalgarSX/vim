@@ -8,20 +8,21 @@ let g:neoformat_python_black = {
 let g:neoformat_enabled_python = ['black']
 " let g:neoformat_enabled_python = ['autopep8', 'black', 'yapf']
 
+" neoformat有默认配置
+let g:neoformat_cpp_clangformat = {
+     \ 'exe': 'clang-format',
+     \ 'style': 'LLVM',
+     \ }
+
+let g:neoformat_c_clangformat = {
+     \ 'exe': 'clang-format',
+     \ 'style': 'LLVM',
+     \ }
+
 let g:neoformat_enabled_c = ['clangformat']
 
 let g:neoformat_enabled_cpp = ['clangformat']
 
-" neoformat有默认配置
-" let g:neoformat_cpp_clangformat = {
-"      \ 'exe': 'clang-format',
-"      \ 'style': 'LLVM',
-"      \ }
-
-" let g:neoformat_c_clangformat = {
-"      \ 'exe': 'clang-format',
-"      \ 'style': 'LLVM',
-"      \ }
 
 let g:neoformat_enabled_json = ['prettier']
 

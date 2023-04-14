@@ -197,6 +197,11 @@ let g:space_key_map.n = {
 let g:space_key_map.t = {
       \ 'name' : '+nerdtree',
       \ }
+let g:space_key_map.h = {
+      \ 'name' : '+switchfile',
+      \ }
+
+
 
 
 call which_key#register('<Space>', "g:space_key_map")
