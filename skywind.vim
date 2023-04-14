@@ -65,15 +65,16 @@ endif
 "----------------------------------------------------------------------
 let s:settings = {  
 	\ 'cygwin': 'd:/linux',
-	\ 'zeal': 'D:\Program Files\zeal-portable\zeal.exe',
+	\ 'zeal': '~\scoop\apps\zeal\current\zeal.exe',
 	\ }
 
 let s:settings_win = {
 	\ 'emacs': 'd:/dev/emacs/bin/runemacs.exe',
-	\ 'gdb' : 'd:/dev/mingw32/bin/gdb.exe',
-	\ 'browser' : '"C:\Program Files\Mozilla Firefox\firefox" --new-tab',
+	\ 'gdb' : '~\scoop\apps\gdb\current\bin\gdb.exe',
+	\ 'browser' : '"C:\Program Files\Google\Chrome\Application\chrome.exe" --new-tab',
 	\ 'junk' : '~/OneDrive/Documents/notes/VimJunk',
 	\ }
+	" \ 'browser' : '"C:\Program Files\Mozilla Firefox\firefox" --new-tab',
 
 call asclib#setting#update(s:settings)
 
