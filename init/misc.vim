@@ -212,24 +212,5 @@ noremap <space>el :call <SID>snip_modeline()<cr>
 noremap <space>et "=strftime("%Y/%m/%d %H:%M:%S")<CR>gp
 
 
-"----------------------------------------------------------------------
-" insert mode fast
-"----------------------------------------------------------------------
-inoremap <c-x>( ()<esc>i
-inoremap <c-x>[ []<esc>i
-inoremap <c-x>' ''<esc>i
-inoremap <c-x>" ""<esc>i
-inoremap <c-x>< <><esc>i
-inoremap <c-x>{ {<esc>o}<esc>ko
-
-if has('gui_running')
-	inoremap <M-(> ()<esc>i
-	inoremap <M-[> []<esc>i
-	inoremap <M-'> ''<esc>i
-	inoremap <M-"> ""<esc>i
-	inoremap <M-<> <><esc>i
-	inoremap <M-{> {<esc>o}<esc>ko
-endif
-
 
 

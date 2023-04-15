@@ -278,7 +278,6 @@ let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_define_advanced_commands = 1
 
 let g:gutentags_plus_switch = 1
-
 " 通过上面的配置，可以在后台自动打理 ctags 和 gtags 数据库，
 " 检测文件改动，并更新到 ~/.cache/tags 目录中，避免污染你的项目目录。
 
@@ -310,6 +309,14 @@ nnoremap <silent><space>mi :call menu#Escope("i")<cr>
 "----------------------------------------------------------------------
 let g:jellybeans_use_term_italics = 0
 let g:jellybeans_use_gui_italics = 0
+
+"----------------------------------------------------------------------
+" colorscheme
+"----------------------------------------------------------------------
+let g:enfocado_style = "neon"
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_better_performance = 1
+colorscheme gruvbox-material
 
 "----------------------------------------------------------------------
 " rainbow

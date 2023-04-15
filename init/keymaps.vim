@@ -78,8 +78,8 @@ noremap <M-j> gj
 noremap <M-k> gk
 inoremap <M-h> <c-left>
 inoremap <M-l> <c-right>
-inoremap <M-j> <c-\><c-o>gj
-inoremap <M-k> <c-\><c-o>gk
+" inoremap <M-j> <c-\><c-o>gj
+" inoremap <M-k> <c-\><c-o>gk
 inoremap <M-y> <c-\><c-o>d$
 cnoremap <M-h> <c-left>
 cnoremap <M-l> <c-right>
@@ -357,6 +357,7 @@ inoremap <silent><m-a> <c-\><c-o>:PreviewSignature<cr>
 "----------------------------------------------------------------------
 " GUI/Terminal
 "----------------------------------------------------------------------
+" quicfix的翻页
 noremap <silent><M-[> :call Tools_QuickfixCursor(2)<cr>
 noremap <silent><M-]> :call Tools_QuickfixCursor(3)<cr>
 noremap <silent><M-{> :call Tools_QuickfixCursor(4)<cr>
@@ -369,12 +370,13 @@ noremap <silent><M-D> :call quickui#preview#scroll(1)<cr>
 " change quickfix size
 noremap <silent><M-s> :copen 15<cr>
 
-inoremap <silent><M-[> <c-\><c-o>:call Tools_QuickfixCursor(2)<cr>
-inoremap <silent><M-]> <c-\><c-o>:call Tools_QuickfixCursor(3)<cr>
-inoremap <silent><M-{> <c-\><c-o>:call Tools_QuickfixCursor(4)<cr>
-inoremap <silent><M-}> <c-\><c-o>:call Tools_QuickfixCursor(5)<cr>
-inoremap <silent><M-u> <c-\><c-o>:call Tools_PreviousCursor(6)<cr>
-inoremap <silent><M-d> <c-\><c-o>:call Tools_PreviousCursor(7)<cr>
+" quickfix jump  插入模式
+" inoremap <silent><M-[> <c-\><c-o>:call Tools_QuickfixCursor(2)<cr>
+" inoremap <silent><M-]> <c-\><c-o>:call Tools_QuickfixCursor(3)<cr>
+" inoremap <silent><M-{> <c-\><c-o>:call Tools_QuickfixCursor(4)<cr>
+" inoremap <silent><M-}> <c-\><c-o>:call Tools_QuickfixCursor(5)<cr>
+" inoremap <silent><M-u> <c-\><c-o>:call Tools_PreviousCursor(6)<cr>
+" inoremap <silent><M-d> <c-\><c-o>:call Tools_PreviousCursor(7)<cr>
 
 
 "----------------------------------------------------------------------

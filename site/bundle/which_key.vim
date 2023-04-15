@@ -32,6 +32,9 @@ let g:alt_key_map = {
   \ 'F2': 'AsyncTask task-f2',
   \ 'F3': 'AsyncTask task-f3',
   \ 'F4': 'AsyncTask task-f4',
+  \ '[': 'copilot next',
+  \ ']': 'copilot prev',
+  \ 'j': 'copilot accept',
   \}
 
 

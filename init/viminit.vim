@@ -47,8 +47,9 @@ set formatoptions+=m
 set formatoptions+=B
 set showcmd
 
-" guoyawen
+" trafalgar
 set belloff=all
+set noshowmode
 " let mapleader=' '
 set clipboard=unnamed
 set splitright
@@ -65,9 +66,7 @@ if has('win32') || has('win64') || has('win95') || has('win16')
 	" set shell=C:\Users\guoya\AppData\Local\Microsoft\WindowsApps\wt.exe
 endif
 
-"主题设置"
-""let g:onedark_termcolors=256
-colorscheme gruvbox
+" colorscheme gruvbox-material 
 set termguicolors
 " Use 256 colors in gui_running mode
 "terminal cursor shape

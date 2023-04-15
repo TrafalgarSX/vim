@@ -116,6 +116,9 @@ if has('gui_running')
 		"color desert256
 		try
 			color gruvbox
+			" color gruvbox-material
+			" color solokai
+			" color onedark
 		catch
 		endtry
 		set guioptions-=t

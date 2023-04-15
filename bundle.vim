@@ -61,10 +61,10 @@ if has_key(s:enabled, 'simple')
 	Plug 'justinmk/vim-sneak'
 	" git command
 	Plug 'tpope/vim-fugitive'
+	" [ ] 相关的快捷键
+    Plug 'tpope/vim-unimpaired'
 	" fast,powerful git branch viewer for vim
 	Plug 'rbong/vim-flog'
-	" [ ] 相关的快捷键
-	Plug 'tpope/vim-unimpaired'
 	" align text
 	Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
 	"  easily to d, c, a, y in parentheses,bracket,quotes xml tags
@@ -209,10 +209,11 @@ if has_key(s:enabled, 'high')
 	" (Jump) Plugin to toggle, display and navigate marks
 	Plug 'kshenoy/vim-signature'
 	" show a diff using vim its sign column support git...
+	" Similar plugin for git: vim-gitgutter
 	Plug 'mhinz/vim-signify'
 	" command-line fuzzy finder
 	Plug 'junegunn/fzf'
-	Plug 'junegunn/fzf.vim', {'on':[]}
+	Plug 'junegunn/fzf.vim'
 	" Text outlining and task management for vim
 	" Plug 'jceb/vim-orgmode', { 'for': 'org' }
 	" 日历插件
@@ -327,7 +328,13 @@ endif
 "----------------------------------------------------------------------
 " modules
 "----------------------------------------------------------------------
-
+" ai complettion
+if has_key(s:enabled, 'AI')
+    Plug 'github/copilot.vim'
+	imap <silent><script><expr> <M-J> copilot#Accept("\<CR>")
+    let g:copilot_no_tab_map = v:true
+endif
+	
 " CoC
 if has_key(s:enabled, 'coc')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -337,7 +344,7 @@ if has_key(s:enabled, 'coc')
 	nnoremap <space>tp :CocCommand explorer<CR>
 endif
 
-" vim-lsp TODO more configuration
+" vim-lsp more configuration done
 if has_key(s:enabled, 'lsp')
 	" lsp 核心插件
 	Plug 'prabirshrestha/vim-lsp'
@@ -531,22 +538,17 @@ endif
 if has_key(s:enabled, 'colors')
     Plug 'joshdick/onedark.vim'
 	Plug 'morhetz/gruvbox'
-	Plug 'mhartington/oceanic-next', {'on':[]}
-	Plug 'soft-aesthetic/soft-era-vim', {'on':[]}
+	Plug 'sainnhe/gruvbox-material'
 	Plug 'sonph/onehalf', {'rtp': 'vim/'}
 	Plug 'sainnhe/sonokai'
-	Plug 'chuling/ci_dark'
 	Plug 'arcticicestudio/nord-vim'
-	Plug 'romainl/Apprentice'
-	Plug 'arzg/vim-colors-xcode', {'on':[]}
+	" Plug 'arzg/vim-colors-xcode', {'on':[]}
     Plug 'wuelnerdotexe/vim-enfocado', {'on':[]}
-	Plug 'kaicataldo/material.vim', {'on':[]}
-	Plug 'cocopon/iceberg.vim', {'on':[]}
-	Plug 'mcchrish/zenbones.nvim', {'on':[]}
-	Plug 'rafi/awesome-vim-colorschemes', {'on':[]}
-	Plug 'flazz/vim-colorschemes'
-	Plug 'jaredgorski/SpaceCamp', {'on':[]}
-	IncScript site/bundle/colors.vim
+	Plug 'kaicataldo/material.vim'
+	" Plug 'cocopon/iceberg.vim', {'on':[]}
+	" Plug 'mcchrish/zenbones.nvim', {'on':[]}
+	Plug 'rafi/awesome-vim-colorschemes'
+	Plug 'flazz/vim-colorschemes', {'on':[]}
 endif
 
 
