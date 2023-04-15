@@ -3,7 +3,8 @@ let g:which_key_disable_default_offset = 1
 let g:which_key_max_size = 0
 
 " 改变提示窗口的颜色
-hi! default link WhichKeyFloating QuickDefaultPreview
+hi! default link WhichKeyFloating BufTabLineHidden
+" QuickDefaultPreview
 
 "===========================================================
 "  alt keymap

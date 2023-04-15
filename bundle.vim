@@ -332,7 +332,7 @@ endif
 if has_key(s:enabled, 'AI')
     Plug 'github/copilot.vim'
 	imap <silent><script><expr> <M-J> copilot#Accept("\<CR>")
-    let g:copilot_no_tab_map = v:true
+    let g:copilot_no_tab_map = v:false
 endif
 	
 " CoC
