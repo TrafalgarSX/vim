@@ -7,10 +7,10 @@ set pythonthreedll=python310.dll
 set luadll=C:\Users\guoya\scoop\apps\lua\5.4.2\lua54.dll
 " set luadll=lua54.dll
 "tabnine依赖 youcompleteme
-let g:bundle_group = ['simple', 'basic', 'high', 'inter', 'opt', 'nerdtree', 'which_key' ]
+let g:bundle_group = ['simple', 'basic', 'high', 'inter', 'opt', 'which_key']
 let g:bundle_group += ['coc', 'ale', 'blamer', 'snippets', 'vimspector']
 let g:bundle_group += ['matchup', 'airline', 'grammer', 'colors', 'cursorword']
-let g:bundle_group += ['AI']
+let g:bundle_group += ['AI', 'defx']
 
 " let g:bundle_group += ['time']
 

@@ -331,7 +331,7 @@ endif
 " ai complettion
 if has_key(s:enabled, 'AI')
     Plug 'github/copilot.vim'
-	imap <silent><script><expr> <M-J> copilot#Accept("\<CR>")
+	imap <silent><script><expr> <M-j> copilot#Accept("\<CR>")
     let g:copilot_no_tab_map = v:false
 endif
 	
@@ -454,6 +454,16 @@ if has_key(s:enabled, 'nerdtree')
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	IncScript site/bundle/nerdtree.vim
 endif
+
+
+if has_key(s:enabled, 'defx')
+	Plug 'Shougo/defx.nvim'
+	Plug 'kristijanhusak/defx-icons'
+	Plug 'kristijanhusak/defx-git'
+	Plug 'roxma/nvim-yarp'
+	Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 
 if has_key(s:enabled, 'grammer')
 	" 语法检查插件, 用来写英文的时候可以试一试
@@ -609,6 +619,11 @@ call plug#end()
 " which_key中的设置需要在 plug#end后面，否则会报 which_key#register找不到的错
 " 误
 IncScript site/bundle/which_key.vim
+
+if has_key(s:enabled, 'defx')
+	" defx也有相同的问题
+	IncScript site/bundle/defx.vim
+endif
 
 "----------------------------------------------------------------------
 " move s:home to the top of rtp

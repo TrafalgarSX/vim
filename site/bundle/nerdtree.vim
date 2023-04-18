@@ -32,3 +32,5 @@ noremap <space>to :NERDTreeFocus<cr>
 noremap <space>tm :NERDTreeMirror<cr>
 noremap <space>tt :exec "NERDTreeToggle " . fnameescape(asclib#path#get_root('%'))<cr>
 
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
