@@ -462,6 +462,8 @@ if has_key(s:enabled, 'defx')
 	Plug 'kristijanhusak/defx-git'
 	Plug 'roxma/nvim-yarp'
 	Plug 'roxma/vim-hug-neovim-rpc'
+	" defx也有相同的问题
+	IncScript site/bundle/defx.vim
 endif
 
 
@@ -615,14 +617,10 @@ endif
 
 call plug#end()
 
-
-" which_key中的设置需要在 plug#end后面，否则会报 which_key#register找不到的错
-" 误
-IncScript site/bundle/which_key.vim
-
-if has_key(s:enabled, 'defx')
-	" defx也有相同的问题
-	IncScript site/bundle/defx.vim
+if has_key(s:enabled, 'which_key')
+	" which_key中的设置需要在 plug#end后面，否则会报 which_key#register找不到的错
+	" 误
+	IncScript site/bundle/which_key.vim
 endif
 
 "----------------------------------------------------------------------

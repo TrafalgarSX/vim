@@ -15,7 +15,6 @@ nnoremap <silent><buffer><expr> <2-LeftMouse> defx#do_action('open')
 " quit vim when defx is the only window
 autocmd WinClosed * if winnr('$') <= 1 | qall | endif
 
-
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   " Define mappings
@@ -82,77 +81,26 @@ function! s:defx_my_settings() abort
   \ defx#do_action('change_vim_cwd')
 endfunction
 
-
-" \ 'columns': 'git:mark:filename:type',
-" \ 'columns': 'indent:icons:filename:type',
-" \ 'columns': 'git:icons:filename:type',
-call defx#custom#option('_', {
-      \ 'columns': 'git:icons:filename:type',
-      \ 'winwidth': 30,
-      \ 'split': 'vertical',
-      \ 'direction': 'topleft',
-      \ 'show_ignored_files': 0,
-      \ 'buffer_name': '',
-      \ 'toggle': 1,
-      \ 'resume': 1
-      \ })
-
-" set defx window width
-call defx#custom#column('filename', {
-	      \ 'min_width': 10,
-	      \ 'max_width': 30,
-	      \ })
-
-" 修改缩进大小
-" call defx#custom#column('indent', {
-"     \ 'indent': '',
-"     \ })
-
-" explore the folder where the current file is
-" :Defx `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')`
-
-" open defx window like explorer 
-" :Defx -split=vertical -winwidth=50 -direction=topleft
-
 " open file like vimfiler explorer mode
 " nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')
-
-" defx root marker
-" call defx#custom#option('_', {
-" 	      \ 'root_marker': ':',
-" 	      \ })
-" call defx#custom#column('filename', {
-" 	      \ 'root_marker_highlight': 'Ignore',
-" 	      \ })
-
-
-
-"----------------------------------------------------------------------
-" defx-git 
-"----------------------------------------------------------------------
-"  determines if ignored files should be marked with indicator.
-" call defx#custom#column('git', 'show_ignored', 0)
-"
-call defx#custom#column('git', 'indicators', {
-  \ 'Modified'  : '✹',
-  \ 'Staged'    : '✚',
-  \ 'Untracked' : '✭',
-  \ 'Renamed'   : '➜',
-  \ 'Unmerged'  : '═',
-  \ 'Ignored'   : '☒',
-  \ 'Deleted'   : '✖',
-  \ 'Unknown'   : '?'
-  \ })
-
-"----------------------------------------------------------------------
-" defx-icons 
-"----------------------------------------------------------------------
-" may cause performance issue
-let g:defx_icons_enable_syntax_highlight = 1
-
 "----------------------------------------------------------------------
 " keymap 
 "----------------------------------------------------------------------
-" noremap <space>tn :exec "Defx " . fnameescape(asclib#path#get_root('%'))<cr>
-noremap <space>tn :<C-U>Defx<cr>
+let s:windows = has('win32') || has('win64') 
+" defx 不支持 windows 路径，需要转换
+function! Get_root(path, ...)
+	let l:hr = asclib#path#get_root('%') 
+	if s:windows!= 0
+		let l:hr = join(split(l:hr, '\\', 1), "/")
+	endif
+	return l:hr
+endfunc
 
+" noremap <space>tt :exec "Defx -search=`" . fnameescape(asclib#path#get_root('%')) . "`"<cr>
+
+noremap <space>tt :exec "Defx " . fnameescape(Get_root('%'))<cr>
+" -resume 是为了保持上次的状态  
+"  -source 用于指定当前的文件夹
+"  -search 用于指定搜索的文件夹
+"  -resource 用于指定资源文件夹
+noremap <space>tn :<C-U>Defx<cr>

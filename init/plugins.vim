@@ -347,3 +347,63 @@ let g:rainbow_conf = {
 	\}
 " NERDTree與Rainbow會衝突，產生多餘的括號
 
+
+"----------------------------------------------------------------------
+" defx 
+"----------------------------------------------------------------------
+" \ 'columns': 'git:mark:filename:type',
+" \ 'columns': 'indent:icons:filename:type',
+" \ 'columns': 'git:icons:filename:type',
+call defx#custom#option('_', {
+      \ 'columns': 'git:icons:filename:type',
+      \ 'winwidth': 30,
+      \ 'split': 'vertical',
+      \ 'direction': 'topleft',
+      \ 'show_ignored_files': 0,
+      \ 'buffer_name': '',
+      \ 'toggle': 1,
+      \ 'resume': 1,
+	  \ 'root_marker': '≡',
+	  \ 'ignored_files':
+	  \     '.mypy_cache,.pytest_cache,.hg,.svn,.stversions,.obj,.so'
+	  \   . ',__pycache__,.sass-cache,*.egg-info,.DS_Store,*.pyc,*.swp'
+	  \   . ',.a,.tmp,.class,.jar,.zip,.7z,.rar,.jpg,.png,.chm,.docx,.xlsx'
+	  \   . '.pdf,.dll,.pptx,.mp4,.mp3,.pyd',
+      \ })
+
+" set defx window width
+call defx#custom#column('filename', {
+	      \ 'min_width': 10,
+	      \ 'max_width': 30,
+	      \ })
+
+" 修改缩进大小
+" call defx#custom#column('indent', {
+"     \ 'indent': '',
+"     \ })
+
+
+
+""----------------------------------------------------------------------
+" defx-icons 
+"----------------------------------------------------------------------
+" may cause performance issue
+let g:defx_icons_enable_syntax_highlight = 1
+
+
+
+"----------------------------------------------------------------------
+" defx-git 
+"----------------------------------------------------------------------
+"  determines if ignored files should be marked with indicator.
+" call defx#custom#column('git', 'show_ignored', 0)
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : 'M',
+  \ 'Staged'    : '✚',
+  \ 'Untracked' : '✭',
+  \ 'Renamed'   : '➜',
+  \ 'Unmerged'  : '═',
+  \ 'Ignored'   : '☒',
+  \ 'Deleted'   : '✖',
+  \ 'Unknown'   : '?'
+  \ })

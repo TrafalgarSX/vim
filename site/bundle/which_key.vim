@@ -13,7 +13,6 @@ hi! default link WhichKeyFloating BufTabLineHidden
 nnoremap <silent> <M-x> :<C-u>WhichKey '<M>'<CR>
 vnoremap <silent> <M-x> :<C-u>WhichKeyVisual '<M>'<CR>
 let g:alt_key_map = get(g:, 'alt_key_map', {})
-
 let g:alt_key_map = {
   \ 'e': 'choosewin',
   \ 'up': 'tabprev',
@@ -37,8 +36,6 @@ let g:alt_key_map = {
   \ ']': 'copilot prev',
   \ 'j': 'copilot accept',
   \}
-
-
 silent! call which_key#register('<M>', "g:alt_key_map")
 
 "===========================================================
@@ -204,9 +201,6 @@ let g:space_key_map.t = {
 let g:space_key_map.h = {
       \ 'name' : '+switchfile',
       \ }
-
-
-
 
 call which_key#register('<Space>', "g:space_key_map")
 
