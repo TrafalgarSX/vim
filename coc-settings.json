@@ -61,5 +61,7 @@
       "bottomUp": true
     }
   },
-  "explorer.root.strategies": ["workspace", "custom:vcs", "custom:vcs-r"]
+  "explorer.root.strategies": ["workspace", "custom:vcs", "custom:vcs-r"],
+
+  "sh.enable": true,
 }

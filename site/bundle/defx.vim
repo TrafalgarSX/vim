@@ -19,9 +19,11 @@ autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   " Define mappings
   nnoremap <silent><buffer><expr> <CR>
-  \ defx#do_action('open')
+  \ defx#do_action('open', 'choose')
   nnoremap <silent><buffer><expr> c
   \ defx#do_action('copy')
+  nnoremap <silent><buffer><expr> i
+  \ defx#do_action('drop')
   nnoremap <silent><buffer><expr> m
   \ defx#do_action('move')
   nnoremap <silent><buffer><expr> p
@@ -82,6 +84,7 @@ function! s:defx_my_settings() abort
 endfunction
 
 " open file like vimfiler explorer mode
+" It open file in last access window or already opened window
 " nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')
 "----------------------------------------------------------------------
 " keymap 

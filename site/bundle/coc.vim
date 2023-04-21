@@ -191,8 +191,10 @@ let s:coc_extensions = [
   \ 'coc-word',
   \ 'coc-yaml',
   \ 'coc-cmake',
+  \ 'coc-gitignore',
+  \ 'coc-qml',
+  \ 'coc-sh',
   \ ]
-
 
   " \ 'coc-yank',
   " \ 'coc-bookmark',
@@ -200,7 +202,6 @@ let s:coc_extensions = [
   " \ 'coc-emoji',
   " \ 'coc-git',
   " \ 'coc-github',
-  " \ 'coc-gitignore',
   " \ 'coc-highlight',
   " \ 'coc-pairs',
   " \ 'coc-vetur',

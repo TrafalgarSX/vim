@@ -22,3 +22,15 @@ if has('gui_running') && (has('win32') || has('win64') || has('win95'))
 endif
 
 
+" let g:floaterm_shell='powershell.exe'
+let g:floaterm_shell='pwsh.exe'
+let g:floaterm_wintype='split'
+" let g:floaterm_width=0.9
+let g:floaterm_height=18
+let g:floaterm_position='belowright'
+
+" Configuration example
+let g:floaterm_keymap_new    = '<space>tl'
+let g:floaterm_keymap_toggle = '<space>tg'
+" let g:floaterm_keymap_prev   = ''
+" let g:floaterm_keymap_next   = ''

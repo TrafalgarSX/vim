@@ -332,7 +332,7 @@ endif
 if has_key(s:enabled, 'AI')
     Plug 'github/copilot.vim'
 	imap <silent><script><expr> <M-j> copilot#Accept("\<CR>")
-    let g:copilot_no_tab_map = v:false
+    let g:copilot_no_tab_map = v:true
 endif
 	
 " CoC
@@ -466,6 +466,10 @@ if has_key(s:enabled, 'defx')
 	IncScript site/bundle/defx.vim
 endif
 
+if has_key(s:enabled, 'floaterm')
+    Plug 'voldikss/vim-floaterm'
+	IncScript site/bundle/floaterm.vim
+endif
 
 if has_key(s:enabled, 'grammer')
 	" 语法检查插件, 用来写英文的时候可以试一试
