@@ -35,7 +35,7 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> P
   \ defx#do_action('preview')
   nnoremap <silent><buffer><expr> o
-  \ defx#do_action('open_tree', 'toggle')
+  \ defx#do_action('open_tree',['toggle' ])
   nnoremap <silent><buffer><expr> K
   \ defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> N
@@ -100,6 +100,7 @@ function! Get_root(path, ...)
 endfunc
 
 " noremap <space>tt :exec "Defx -search=`" . fnameescape(asclib#path#get_root('%')) . "`"<cr>
+
 
 noremap <space>tt :exec "Defx " . fnameescape(Get_root('%'))<cr>
 " -resume 是为了保持上次的状态  

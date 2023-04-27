@@ -354,8 +354,9 @@ let g:rainbow_conf = {
 " \ 'columns': 'git:mark:filename:type',
 " \ 'columns': 'indent:icons:filename:type',
 " \ 'columns': 'git:icons:filename:type',
+let g:defx_directory_tree = 1
 call defx#custom#option('_', {
-      \ 'columns': 'git:icons:filename:type',
+      \ 'columns': 'git:indent:icons:filename:type',
       \ 'winwidth': 30,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
@@ -378,11 +379,20 @@ call defx#custom#column('filename', {
 	      \ })
 
 " 修改缩进大小
-" call defx#custom#column('indent', {
-"     \ 'indent': '',
-"     \ })
+call defx#custom#column('indent', {
+    \ 'indent': ' ',
+    \ })
 
-
+" Defx highlights
+highlight! Defx_git_Modified  ctermfg=1   guifg=#D370A3
+highlight! Defx_git_Staged    ctermfg=10  guifg=#A3D572
+highlight! Defx_git_Deleted   ctermfg=167 guifg=#fb4934
+highlight def link Defx_filename_directory  Directory
+highlight def link Defx_git_Renamed   Title
+highlight def link Defx_git_Unmerged  Label
+highlight def link Defx_git_Untracked Comment
+highlight def link Defx_git_Ignored   Comment
+highlight def link Defx_git_Unknown   Comment
 
 ""----------------------------------------------------------------------
 " defx-icons 
@@ -398,13 +408,13 @@ let g:defx_icons_enable_syntax_highlight = 1
 "  determines if ignored files should be marked with indicator.
 " call defx#custom#column('git', 'show_ignored', 0)
 call defx#custom#column('git', 'indicators', {
-  \ 'Modified'  : 'M',
+  \ 'Modified'  : '',
   \ 'Staged'    : '✚',
   \ 'Untracked' : '✭',
-  \ 'Renamed'   : '➜',
-  \ 'Unmerged'  : '═',
+  \ 'Renamed'   : '',
+  \ 'Unmerged'  : '',
   \ 'Ignored'   : '☒',
-  \ 'Deleted'   : '✖',
+  \ 'Deleted'   : '',
   \ 'Unknown'   : '?'
   \ })
 
@@ -413,3 +423,4 @@ call defx#custom#column('git', 'indicators', {
 " polyglot 
 "----------------------------------------------------------------------
 autocmd FileType sh set syntax=zsh
+

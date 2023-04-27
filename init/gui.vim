@@ -122,11 +122,11 @@ if has('gui_running')
 		catch
 		endtry
 		set guioptions-=t
-		set guioptions=egrm
-		" T是 工具栏的意思
+		set guioptions=egr
+		" T是 工具栏的意思 m是菜单栏的意思
 		" set guioptions=egrmT
-		"
-		" au GuiEnter * set t_vb=
+		" 
+		au GuiEnter * set t_vb=
 
 	elseif has('gui_macvim')
 		color seoul256

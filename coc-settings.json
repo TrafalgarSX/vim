@@ -45,7 +45,7 @@
   "list.maxHeight": 15,
   "list.source.grep.defaultArgs": ["-smartcase", "-regex"],
   "list.source.grep.defaultOptions": ["--interactive", "--no-sort", "--regex"],
-  "[rust][lua][c][python]": {
+  "[rust][lua][c][cpp][python]": {
     "inlayHint.enable": false
   },
 

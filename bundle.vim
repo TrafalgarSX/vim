@@ -134,6 +134,7 @@ if has_key(s:enabled, 'basic')
 	Plug 'pprovost/vim-ps1', { 'for': 'ps1' }
 	Plug 'tbastos/vim-lua', { 'for': 'lua' }
 	" Plug 'vim-python/python-syntax', { 'for': ['python'] }
+	let g:polyglot_disabled = ['c', 'cpp']
 	Plug 'sheerun/vim-polyglot'
 	Plug 'pboettch/vim-cmake-syntax'
 	Plug 'skywind3000/vim-flex-bison-syntax', { 'for': ['yacc', 'lex'] }
@@ -160,7 +161,12 @@ if has_key(s:enabled, 'basic')
 	" Plug 'jceb/vim-textobj-uri'
 
 	if !has_key(s:enabled, 'syntax-extra')
-		Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
+		Plug 'bfrg/vim-cpp-modern'
+		" seems too old
+		" Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
+		let g:cpp_attribute_highlight = 1
+		let g:cpp_member_highlight = 1
+		let g:cpp_simple_highlight = 1
 	else
 		Plug 'justinmk/vim-syntax-extra', { 'for': ['c', 'bison', 'flex', 'cpp'] }
 	endif
