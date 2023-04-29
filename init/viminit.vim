@@ -32,10 +32,13 @@ set ruler
 set nopaste
 set display=lastline
 
-set shiftwidth=4
-set softtabstop=4
-set noexpandtab
-set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=2
+set softtabstop=2
+" On pressing tab, insert 4 spaces; only spaces, no tab characters
+set expandtab
+" show existing tab with 4 spaces width
+set tabstop=2
 
 if has('multi_byte')
 	set encoding=utf-8
