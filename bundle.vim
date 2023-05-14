@@ -558,7 +558,8 @@ endif
 
 
 if has_key(s:enabled, 'colors')
-    Plug 'joshdick/onedark.vim'
+	Plug 'joshdick/onedark.vim'
+	Plug 'hardhackerlabs/theme-vim', { 'as': 'hardhacker' }
 	Plug 'morhetz/gruvbox'
 	Plug 'sainnhe/gruvbox-material'
 	Plug 'sonph/onehalf', {'rtp': 'vim/'}
