@@ -6,12 +6,17 @@ let g:EasyMotion_smartcase = 1
 
 nmap <space>q <Plug>(easymotion-s)
 nmap <space>z <Plug>(easymotion-bd-w)
+vmap <space>z <Plug>(easymotion-bd-w)
 
 nmap <tab>m <Plug>(easymotion-s)
 nmap <tab>n <Plug>(easymotion-bd-w)
+vmap <tab>n <Plug>(easymotion-bd-w)
 
-nmap <space><space>w <Plug>(easymotion-w)
-nmap <space><space>b <Plug>(easymotion-b)
+" nmap <space><space>w <Plug>(easymotion-w)
+" nmap <space><space>b <Plug>(easymotion-b)
+
+" vmap <space><space>w <Plug>(easymotion-w)
+" vmap <space><space>b <Plug>(easymotion-b)
 
 " 重复
 " nmap <c-q> <Plug>(easymotion-bd-w)
