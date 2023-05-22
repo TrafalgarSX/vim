@@ -51,6 +51,7 @@ set formatoptions+=B
 set showcmd
 
 " trafalgar
+set fo-=r;
 set belloff=all
 set noshowmode
 " let mapleader=' '
