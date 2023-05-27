@@ -51,13 +51,16 @@ set formatoptions+=B
 set showcmd
 
 " trafalgar
-set fo-=r;
 set belloff=all
 set noshowmode
 " let mapleader=' '
 set clipboard=unnamed
 set splitright
 xnoremap p "_dP
+" 针对所有类型的文件，不会自动插入注释符号
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" 针对c/c++文件，在有注释行下面插入新行时，不会自动插入注释符号
+" au FileType c,cpp setlocal comments-=:// comments+=f://
 
 if has('win32') || has('win64') || has('win95') || has('win16')
 	" 如果设置成powershell, neoformat插件会有问题，无法正确格式化
