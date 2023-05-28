@@ -226,27 +226,31 @@ inoremap <silent><c-f10> <ESC>:AsyncTaskList<cr>
 
 noremap <silent><m-F5> :AsyncTask file-run<cr>
 noremap <silent><m-F6> :AsyncTask make<cr>
-noremap <silent><m-F7> :AsyncTask emake<cr>
-noremap <silent><m-F8> :AsyncTask emake-exe<cr>
+" noremap <silent><m-F7> :AsyncTask <cr>
+" noremap <silent><m-F8> :AsyncTask <cr>
 noremap <silent><m-F9> :AsyncTask file-build<cr>
 noremap <silent><m-F10> :call asyncrun#quickfix_toggle(15)<cr>
-noremap <silent><s-f5> :AsyncTask project-run<cr>
-noremap <silent><s-f6> :AsyncTask project-test<cr>
-noremap <silent><s-f7> :AsyncTask project-init<cr>
-noremap <silent><s-f8> :AsyncTask project-install<cr>
-noremap <silent><s-f9> :AsyncTask project-build<cr>
+
+noremap <silent><s-f4> :AsyncTask mingw-lib-init<cr>
+noremap <silent><s-f5> :AsyncTask mingw-lib-build<cr>
+noremap <silent><s-f6> :AsyncTask mingw-lib-install<cr>
+noremap <silent><s-f7> :AsyncTask msvc-lib-init<cr>
+noremap <silent><s-f8> :AsyncTask msvc-lib-build<cr>
+noremap <silent><s-f9> :AsyncTask msvc-lib-install<cr>
 
 inoremap <silent><m-F5> <ESC>:AsyncTask file-run<cr>
 inoremap <silent><m-F6> <ESC>:AsyncTask make<cr>
-inoremap <silent><m-F7> <ESC>:AsyncTask emake<cr>
-inoremap <silent><m-F8> <ESC>:AsyncTask emake-exe<cr>
+" inoremap <silent><m-F7> <ESC>:AsyncTask <cr>
+" inoremap <silent><m-F8> <ESC>:AsyncTask <cr>
 inoremap <silent><m-F9> <ESC>:AsyncTask file-build<cr>
 inoremap <silent><m-F10> <ESC>:call asyncrun#quickfix_toggle(15)<cr>
-inoremap <silent><s-f5> <ESC>:AsyncTask project-run<cr>
-inoremap <silent><s-f6> <ESC>:AsyncTask project-test<cr>
-inoremap <silent><s-f7> <ESC>:AsyncTask project-init<cr>
-inoremap <silent><s-f8> <ESC>:AsyncTask project-install<cr>
-inoremap <silent><s-f9> <ESC>:AsyncTask project-build<cr>
+
+inoremap <silent><s-f4> :AsyncTask mingw-lib-init<cr>
+inoremap <silent><s-f5> :AsyncTask mingw-lib-build<cr>
+inoremap <silent><s-f6> :AsyncTask mingw-lib-install<cr>
+inoremap <silent><s-f7> :AsyncTask msvc-lib-init<cr>
+inoremap <silent><s-f8> :AsyncTask msvc-lib-build<cr>
+inoremap <silent><s-f9> :AsyncTask msvc-lib-install<cr>
 
 " TODO 待定
 noremap <silent><m-f1> :AsyncTask task-f1<cr>
