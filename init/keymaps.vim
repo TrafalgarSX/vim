@@ -237,6 +237,8 @@ noremap <silent><s-f6> :AsyncTask mingw-lib-install<cr>
 noremap <silent><s-f7> :AsyncTask msvc-lib-init<cr>
 noremap <silent><s-f8> :AsyncTask msvc-lib-build<cr>
 noremap <silent><s-f9> :AsyncTask msvc-lib-install<cr>
+noremap <silent><s-f1> :AsyncTask msvc-lib-ctest<cr>
+noremap <silent><s-f2> :AsyncTask mingw-lib-ctest<cr>
 
 inoremap <silent><m-F5> <ESC>:AsyncTask file-run<cr>
 inoremap <silent><m-F6> <ESC>:AsyncTask make<cr>
@@ -251,6 +253,8 @@ inoremap <silent><s-f6> :AsyncTask mingw-lib-install<cr>
 inoremap <silent><s-f7> :AsyncTask msvc-lib-init<cr>
 inoremap <silent><s-f8> :AsyncTask msvc-lib-build<cr>
 inoremap <silent><s-f9> :AsyncTask msvc-lib-install<cr>
+inoremap <silent><s-f1> :AsyncTask msvc-lib-ctest<cr>
+inoremap <silent><s-f2> :AsyncTask mingw-lib-ctest<cr>
 
 " TODO 待定
 noremap <silent><m-f1> :AsyncTask task-f1<cr>
