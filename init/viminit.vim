@@ -33,6 +33,7 @@ set nopaste
 set display=lastline
 
 " when indenting with '>', use 4 spaces width
+set hidden
 set shiftwidth=2
 set softtabstop=2
 " On pressing tab, insert 4 spaces; only spaces, no tab characters
@@ -80,8 +81,8 @@ set termguicolors
 if !has('gui_running')
   set t_Co=256
   " insert mode
-  let &t_SI = "\<ESC>[5 q". "\<ESC>]12;green\x7"
-  " normal mode
+  let &t_SI = "\<ESC>[5 q". "\<ESC>]12;rgb:b8/a5/26\x7" 
+  " normal mode     
   let &t_EI = "\<ESC>[2 q"
 endif
 

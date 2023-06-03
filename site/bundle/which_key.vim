@@ -80,11 +80,14 @@ let g:space_key_map.c = {
   \}
 
 let g:space_key_map.l = {
-    \ 'name' : '+linting',
+    \ 'name' : '+linting+leetcode',
     \ 'p' : 'lint_pylint',
     \ 'f' : 'lint_flake8',
     \ 'g' : 'opengprof',
-	\ 't' : 'html_prettify',
+    \ 'l' : 'leetcodeList',
+    \ 't' : 'leetcodeTest',
+    \ 's' : 'leetcodeSubmit',
+    \ 'i' : 'leetcodeSignIn',
     \}
 
 let g:space_key_map['f'] = {

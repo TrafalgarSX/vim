@@ -66,8 +66,8 @@ noremap <silent><m-w> :tabclose<cr>
 inoremap <silent><m-w> <ESC>:tabclose<cr>
 noremap <silent><m-v> :close<cr>
 inoremap <silent><m-v> <esc>:close<cr>
-" noremap <m-s> :w<cr>
-" inoremap <m-s> <esc>:w<cr>
+noremap <m-s> :w<cr>
+inoremap <m-s> <esc>:w<cr>
 
 "----------------------------------------------------------------------
 " Movement Enhancement
@@ -375,8 +375,8 @@ noremap <silent><M-d> :call Tools_PreviousCursor(7)<cr>
 noremap <silent><M-U> :call quickui#preview#scroll(-1)<cr>
 noremap <silent><M-D> :call quickui#preview#scroll(1)<cr>
 
-" change quickfix size
-noremap <silent><M-s> :copen 15<cr>
+" resize quickfix
+noremap <silent><M-r> :copen 15<cr>
 
 " quickfix jump  插入模式
 " inoremap <silent><M-[> <c-\><c-o>:call Tools_QuickfixCursor(2)<cr>
@@ -474,7 +474,7 @@ noremap <silent><space>lf :call asclib#lint_flake8('')<cr>
 " noremap <silent><space>lc :call asclib#lint_cppcheck('')<cr>
 " 这好像是go的
 noremap <silent><space>lg :call asclib#open_gprof('', '')<cr>
-noremap <silent><space>lt :call asclib#html_prettify()<cr>
+" noremap <silent><space>lt :call asclib#html_prettify()<cr>
 
 
 "----------------------------------------------------------------------
@@ -545,6 +545,10 @@ nmap <Leader>xS   :so $HOME/.vim/xfer<CR>
 nmap <Leader>xy   :'a,.y *<CR>
 vmap <Leader>xy   :y *<CR>
 
-
-
-
+"----------------------------------------------------------------------
+" leetcode
+"----------------------------------------------------------------------
+nnoremap <space>ll :LeetCodeList<cr>
+nnoremap <space>lt :LeetCodeTest<cr>
+nnoremap <space>ls :LeetCodeSubmit<cr>
+nnoremap <space>li :LeetCodeSignIn<cr>

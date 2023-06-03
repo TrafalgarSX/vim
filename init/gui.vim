@@ -11,7 +11,6 @@ function! QuickfixChineseConvert()
 endfunction
 
 
-
 "----------------------------------------------------------------------
 "- GUI Setting
 "----------------------------------------------------------------------
@@ -23,7 +22,7 @@ function! s:GuiTheme(theme)
 	endif
 	if l:theme == '0'
 		set guifont=FuraMono\ NFM:h11
-		color gruvbox
+		color onedark
 		highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE
 			\ gui=NONE guifg=DarkGrey guibg=NONE
 	elseif l:theme == '1'
@@ -115,10 +114,12 @@ if has('gui_running')
 		let g:config_vim_tab_style = 3
 		"color desert256
 		try
-			color gruvbox
+			" color gruvbox
 			" color gruvbox-material
-			" color solokai
-			" color onedark
+			" color sonokai
+			" color ayu
+			" color agterglow
+			color onedark
 		catch
 		endtry
 		set guioptions-=t

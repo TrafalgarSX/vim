@@ -310,7 +310,6 @@ if has_key(s:enabled, 'opt')
 	" 	" management of tags files in vim
 	" 	Plug 'skywind3000/vim-gutentags'
 	" endif
-
 	if s:uname == 'windows'
 		let g:python3_host_prog="python"
 	endif

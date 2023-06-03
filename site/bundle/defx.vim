@@ -6,14 +6,13 @@
 " Last Modified: 2023/4/18 01:01:04
 "
 "======================================================================
-
-
 " update defx status automatically when changing file 
 autocmd BufWritePost * call defx#redraw()
 " double click to open file
 nnoremap <silent><buffer><expr> <2-LeftMouse> defx#do_action('open')
 " quit vim when defx is the only window
-autocmd WinClosed * if winnr('$') <= 1 | qall | endif
+" 这个配置会导致打开多个tab， 关闭某一个tab时，vim会自动退出
+" autocmd WinClosed * if winnr('$') <= 1 | qall | endif
 
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
