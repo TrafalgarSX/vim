@@ -11,28 +11,32 @@
 "----------------------------------------------------------------------
 " keymap
 "----------------------------------------------------------------------
-let g:Lf_ShortcutF = '<c-p>'
-let g:Lf_ShortcutB = '<m-n>'
-noremap <c-n> :cclose<cr>:Leaderf --nowrap mru --regexMode<cr>
-noremap <m-p> :cclose<cr>:Leaderf! --nowrap function<cr>
-noremap <m-P> :cclose<cr>:Leaderf! --nowrap buftag<cr>
-noremap <m-n> :cclose<cr>:Leaderf! --nowrap buffer<cr>
-noremap <m-m> :cclose<cr>:Leaderf --nowrap tag<cr>
-let g:Lf_MruMaxFiles = 2048
-let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
+" noremap <c-n> :cclose<cr>:Leaderf --nowrap mru --regexMode<cr>
+" noremap <m-p> :cclose<cr>:Leaderf! --nowrap function<cr>
+" noremap <m-P> :cclose<cr>:Leaderf! --nowrap buftag<cr>
+" noremap <m-n> :cclose<cr>:Leaderf! --nowrap buffer<cr>
+" noremap <m-m> :cclose<cr>:Leaderf --nowrap tag<cr>
+" noremap <m-g> :Leaderf --nowrap tasks<cr>
+" inoremap <m-g> <esc>:Leaderf --nowrap tasks<cr>
 
-noremap <m-g> :Leaderf --nowrap tasks<cr>
-inoremap <m-g> <esc>:Leaderf --nowrap tasks<cr>
-
-if has('gui_running')
-	noremap <c-f12> :Leaderf --nowrap tasks<cr>
-	inoremap <c-f12> <esc>:Leaderf --nowrap tasks<cr>
-endif
+" if has('gui_running')
+" 	noremap <c-f12> :Leaderf --nowrap tasks<cr>
+" 	inoremap <c-f12> <esc>:Leaderf --nowrap tasks<cr>
+" endif
 
 
 "----------------------------------------------------------------------
 " LeaderF
 "----------------------------------------------------------------------
+" linux
+if has('unix')
+	let g:python3_host_prog = "/usr/bin/python3"
+" windows
+elseif has('win32') || has('win64')
+	let g:python3_host_prog = "C:/python/python.exe"
+endif
+
+let g:python3_host_prog = "python3"
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
 let g:Lf_WindowHeight = 0.30
