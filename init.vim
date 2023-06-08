@@ -3,14 +3,13 @@ command! -nargs=1 IncScript exec 'so '. fnameescape(s:home."/<args>")
 exec 'set rtp+='. fnameescape(s:home)
 exec 'set rtp+=~/.vim'
 
-if has('win64') && filereadable('C:\Users\guoya\scoop\apps\lua\5.4.2\lua54.dll')
+if has('win64') 
   set luadll=C:\Users\guoya\scoop\apps\lua\5.4.2\lua54.dll
 endif
 
-if has('win64') && filereadable('C:\python\python3.dll')
-  set pythonthreedll=C:\python\python3.dll
+if has('win64') || has('win32') 
+  set pythonthreedll=python310.dll
 endif
-
 
 
 " set luadll=lua54.dll

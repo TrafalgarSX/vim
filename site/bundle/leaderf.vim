@@ -35,8 +35,6 @@ if has('unix')
 elseif has('win32') || has('win64')
 	let g:python3_host_prog = "C:/python/python.exe"
 endif
-
-let g:python3_host_prog = "python3"
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
 let g:Lf_WindowHeight = 0.30
