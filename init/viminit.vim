@@ -63,6 +63,13 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " 针对c/c++文件，在有注释行下面插入新行时，不会自动插入注释符号
 " au FileType c,cpp setlocal comments-=:// comments+=f://
 
+" Enable autosave on nvim startup
+let g:auto_save = 1
+" A list of events to trigger autosave
+let g:auto_save_events = ['InsertLeave', 'TextChanged']
+" Whether to show autosave status on command line
+let g:auto_save_silent = 0
+
 if has('win32') || has('win64') || has('win95') || has('win16')
 	" 如果设置成powershell, neoformat插件会有问题，无法正确格式化
 	" set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
